@@ -1,0 +1,39 @@
+.document-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.header-logo {
+  height: 100px;
+
+  &.rounded {
+    border-radius: 100%;
+  }
+}
+
+.header-right {
+  text-align: right;
+  font-size: 10pt;
+  color: $gray-600;
+
+  p {
+    margin: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.org-name {
+  font-weight: 600;
+  color: $heading-color;
+}

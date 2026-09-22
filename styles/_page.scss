@@ -1,0 +1,23 @@
+// _page.scss
+
+@page {
+    size: A4 portrait;
+
+    margin-top: 1.5cm;
+    margin-bottom: 1.5cm;
+    margin-left: 1.5cm;
+    margin-right: 1.5cm;
+
+    @top-center {
+        content: "";
+    }
+
+    @bottom-center {
+        content: "";
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}

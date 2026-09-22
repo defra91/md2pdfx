@@ -1,0 +1,214 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../templates/fonts/Inter_24pt-Regular.ttf");
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Inter";
+  src: url("../templates/fonts/Inter_24pt-Bold.ttf");
+  font-weight: bold; }
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../templates/fonts/Montserrat-Regular.ttf");
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../templates/fonts/Montserrat-Italic.ttf");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../templates/fonts/Montserrat-Bold.ttf");
+  font-weight: bold; }
+
+@font-face {
+  font-family: "Roboto-Mono";
+  src: url("../templates/fonts/RobotoMono-Regular.ttf");
+  font-weight: normal; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11pt;
+  line-height: 1.6;
+  color: #333; }
+
+h1,
+h2,
+h3 {
+  color: #1A1F36;
+  line-height: 1.3;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem; }
+
+a {
+  color: #4a6fa5; }
+
+h1.document-title {
+  font-size: 22pt; }
+
+h2 {
+  font-size: 17pt; }
+
+h2 {
+  font-size: 17pt; }
+
+h3 {
+  font-size: 13pt; }
+
+h4 {
+  font-size: 12pt; }
+
+h5 {
+  font-size: 10pt; }
+
+h6 {
+  font-size: 8pt; }
+
+p {
+  margin-bottom: 0.5rem; }
+
+ul,
+ol {
+  margin-bottom: 0.5rem; }
+
+code {
+  background: #f7f7f7;
+  border: 1px solid #cfcfcf;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: "Roboto-Mono", monospace;
+  font-size: 10pt; }
+
+pre {
+  background: #f7f7f7;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #cfcfcf;
+  overflow-x: auto; }
+
+.document-title {
+  font-size: 28pt;
+  font-weight: 700;
+  color: #1A1F36;
+  margin-bottom: 0.5rem; }
+
+.document-subtitle {
+  font-size: 14pt;
+  font-style: italic;
+  font-weight: 500;
+  color: #555;
+  margin-top: -0.5rem; }
+
+@page {
+  size: A4 portrait;
+  margin-top: 1.5cm;
+  margin-bottom: 1.5cm;
+  margin-left: 1.5cm;
+  margin-right: 1.5cm;
+  @top-center {
+    content: ""; }
+  @bottom-center {
+    content: ""; } }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+.document-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem; }
+
+.header-left {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem; }
+
+.header-logo {
+  height: 100px; }
+  .header-logo.rounded {
+    border-radius: 100%; }
+
+.header-right {
+  text-align: right;
+  font-size: 10pt;
+  color: #555; }
+  .header-right p {
+    margin: 0; }
+    .header-right p:last-child {
+      margin-bottom: 0; }
+
+.org-name {
+  font-weight: 600;
+  color: #1A1F36; }
+
+.table-of-contents {
+  margin-bottom: 3rem; }
+  .table-of-contents ul {
+    list-style: none;
+    padding-left: 0; }
+  .table-of-contents .toc-list {
+    list-style: none;
+    padding-left: 0; }
+  .table-of-contents .toc-item {
+    font-size: 11pt;
+    margin: 0.2rem 0; }
+  .table-of-contents .toc-link {
+    color: inherit;
+    text-decoration: none; }
+  .table-of-contents .toc-number {
+    display: inline-block;
+    width: 1.5rem; }
+  .table-of-contents .toc-level-2 {
+    margin-left: 0.5rem; }
+    .table-of-contents .toc-level-2 .toc-number {
+      width: 2rem; }
+  .table-of-contents .toc-level-3 {
+    margin-left: 1rem;
+    font-size: 0.9em; }
+    .table-of-contents .toc-level-3 .toc-number {
+      width: 2.5rem; }
+  .table-of-contents .toc-level-4 {
+    margin-left: 1.5rem; }
+    .table-of-contents .toc-level-4 .toc-number {
+      width: 3rem; }
+
+.content ul {
+  padding-left: 20px;
+  list-style-type: "- "; }
+  .content ul li p {
+    margin: 0; }
+
+.content ol {
+  padding-left: 20px; }
+
+.signature-container {
+  margin-top: 2rem; }
+
+.signatures {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-top: 2rem; }
+
+.signature-block {
+  text-align: center;
+  width: 45%; }
+
+.signature-role {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.signature-line {
+  border-bottom: 1px solid #999;
+  height: 3rem;
+  margin-bottom: 0.5rem; }
+
+.signature-name {
+  font-weight: 600;
+  margin-top: 0; }

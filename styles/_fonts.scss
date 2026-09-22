@@ -1,0 +1,38 @@
+// _fonts.scss
+
+@font-face {
+  font-family: "Inter";
+  src: url("../templates/fonts/Inter_24pt-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../templates/fonts/Inter_24pt-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../templates/fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../templates/fonts/Montserrat-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../templates/fonts/Montserrat-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Roboto-Mono";
+  src: url("../templates/fonts/RobotoMono-Regular.ttf");
+  font-weight: normal;
+}

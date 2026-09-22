@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="document-header">
+
+    <div class="header-left">
+      {% for logo, rounded in logos %}
+      <img src="{{ logo }}" class="header-logo {% if rounded %}rounded{% endif %}">
+      {% endfor %}
+    </div>
+
+    <div class="header-right">
+      <p class="org-name">{{ organization.name }}</p>
+      <p>{{ organization.address_line_1 }}</p>
+      <p>{{ organization.address_line_2 }}</p>
+      <p>C.F.: {{ organization.tax_code }}</p>
+    </div>
+  </div>
+
+  {% if title %}
+  <h1 class="document-title">{{ title }}</h1>
+  {% endif %}
+
+  {% if subtitle %}
+  <h2 class="document-subtitle">{{ subtitle }}</h2>
+  {% endif %}
+
+  {% if toc %}
+  <div class="table-of-contents">
+    <ul class="toc-list">
+      {% for item in toc %}
+      <li class="toc-item toc-level-{{ item.level }}">
+        <a href="#{{ item.anchor }}" class="toc-link">
+          <span class="toc-number">{{ item.number }}</span>
+          <span class="toc-title">{{ item.title }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <div class="content">
+    {{ content | safe }}
+  </div>
+
+  {% if signature %}
+    <div class="signature-container">
+      
+      <div class="signature-place-and-date">
+        {{ signature.place }}, {{ signature.date }}
+      </div>
+
+      <div class="signatures">
+        {% for sig in signature.signatures %}
+        <div class="signature-block">
+          <div class="signature-role">{{ sig.role }}</div>
+          <div class="signature-line"></div>
+          <div class="signature-name">{{ sig.name }}</div>
+        </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  {% endif %}
+
+
+</body>
+
+</html>

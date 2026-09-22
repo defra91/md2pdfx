@@ -1,0 +1,31 @@
+.signature-container {
+  margin-top: 2rem;
+}
+
+.signatures {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.signature-block {
+  text-align: center;
+  width: 45%;
+}
+
+.signature-role {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.signature-line {
+  border-bottom: 1px solid #999;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.signature-name {
+  font-weight: 600;
+  margin-top: 0;
+}

@@ -1,0 +1,91 @@
+// _typography.scss
+
+body {
+  font-family: $main-font;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+}
+
+h1,
+h2,
+h3 {
+  color: $heading-color;
+  line-height: $line-height-heading;
+  font-weight: 600;
+  margin-top: $section-spacing;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: $color-accent;
+}
+
+h1.document-title {
+  font-size: $font-size-h1;
+}
+
+h2 { 
+  font-size: $font-size-h2;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+h4 {
+  font-size: $font-size-h4;
+}
+
+h5 {
+  font-size: $font-size-h5;
+}
+
+h6 {
+  font-size: $font-size-h6;
+}
+
+p {
+  margin-bottom: $paragraph-spacing;
+}
+
+ul,
+ol {
+  margin-bottom: $paragraph-spacing;
+}
+
+code {
+  background: $code-bg;
+  border: 1px solid $code-border;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: $font-mono;
+  font-size: 10pt;
+}
+
+pre {
+  background: $gray-100;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid $gray-300;
+  overflow-x: auto;
+}
+
+.document-title {
+  font-size: 28pt;
+  font-weight: 700;
+  color: $heading-color;
+  margin-bottom: 0.5rem;
+}
+
+.document-subtitle {
+  font-size: 14pt;
+  font-style: italic;
+  font-weight: 500;
+  color: $gray-600;
+  margin-top: -0.5rem
+}
