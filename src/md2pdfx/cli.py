@@ -2,7 +2,6 @@
 
 import click
 from pathlib import Path
-from markdown_it import MarkdownIt
 from jinja2 import Environment, FileSystemLoader
 from weasyprint import HTML
 
@@ -14,12 +13,11 @@ from md2pdfx.heading_normalizer import normalize_heading
 from md2pdfx.html_debugger import dump_debug_html
 from md2pdfx.config import DocumentConfig
 from md2pdfx.toc import extract_headings
-
+from md2pdfx.md import render_md
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 TPL_DIR = BASE_DIR / "templates"
 
-md = MarkdownIt().enable('table')
 env = Environment(loader=FileSystemLoader(str(TPL_DIR)))
 template = env.get_template("base.html")
 
@@ -71,7 +69,7 @@ def main(config, output, debug_html, show_toc):
 
     for file in md_files:
         raw = file.read_text(encoding="utf-8")
-        rendered = md.render(raw)
+        rendered = render_md(raw)
         normalized  = normalize_heading(rendered)
         numbered_html = apply_heading_numbers(normalized, toc)
         html_parts.append(numbered_html)
@@ -80,8 +78,6 @@ def main(config, output, debug_html, show_toc):
        (logo.path_windows if debug_html else logo.path_linux, logo.rounded)
         for logo in cfg.organization.logos
     ]
-
-    print(cfg.signature)
 
     full_html = template.render(
         organization=cfg.organization,
