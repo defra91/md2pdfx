@@ -6,7 +6,7 @@ from jinja2 import Environment, FileSystemLoader
 from weasyprint import HTML
 
 from md2pdfx.toc import apply_heading_numbers, number_toc
-from md2pdfx.path_resolvers import resolve_section_paths
+from md2pdfx.path_resolvers import resolve_section_paths, resolve_custom_styles_paths
 from md2pdfx.style_utilities import compile_sass
 from md2pdfx.pdf import html_to_pdf
 from md2pdfx.heading_normalizer import normalize_heading
@@ -87,6 +87,7 @@ def main(config, output, debug_html, show_toc):
         toc=toc,
         logos=logos,
         signature=cfg.signature,
+        custom_styles_href_list=resolve_custom_styles_paths(config_path, cfg.custom_styles, debug_html)
     )
 
     if debug_html:

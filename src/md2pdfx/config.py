@@ -38,3 +38,7 @@ class DocumentConfig:
     @property
     def signature(self):
         return self.data.get("signature", {})
+
+    @property
+    def custom_styles(self):
+        return self.data.get("custom_styles", {})
